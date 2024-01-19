@@ -17,7 +17,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
         - 06_北由利断層
         - 07_秋田仙北地震
         - 08_横手盆地東縁断層帯北部
-      - 上記の8パターンのシェープファイルをPython（GDAL）でFlatGeobuf形式のデータに変換し、リネーム後、下記のtippecanoeのコマンドを実行して作成。
+      - 上記の8パターンのシェープファイルをPython（[GDAL/OGR](https://live.osgeo.org/ja/overview/gdal_overview.html)）でFlatGeobuf形式のデータに変換し、リネーム後、下記の[tippecanoe](https://github.com/felt/tippecanoe)のコマンドを実行して作成。
           - tippecanoeのコマンド
             ```
             tippecanoe -o akita-earthquake-data.pmtiles -Z8 -pf -pk -P \
