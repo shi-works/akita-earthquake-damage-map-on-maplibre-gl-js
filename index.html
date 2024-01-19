@@ -76,7 +76,6 @@
             height: 15px;
         }
 
-
         .radio-button-container {
             position: absolute;
             top: 10px;
@@ -86,6 +85,14 @@
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: start;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -93,10 +100,74 @@
 <body>
     <div id="map"></div>
     <div class="radio-button-container">
-        <input type="radio" id="sindo" name="layer" value="sindo" checked>
-        <label for="sindo">震度分布図</label>
-        <input type="radio" id="ekijoka" name="layer" value="ekijoka">
-        <label for="ekijoka">液状化危険度分布図</label>
+        <div class="column">
+            <div>
+                <input type="radio" id="sindo-01" name="layer" value="sindo" checked>
+                <label for="sindo-01">震度(01_能代断層帯)</label>
+            </div>
+            <div>
+                <input type="radio" id="sindo-02" name="layer" value="sindo">
+                <label for="sindo-02">震度(02_花輪東断層帯)</label>
+            </div>
+            <div>
+                <input type="radio" id="sindo-03" name="layer" value="sindo">
+                <label for="sindo-03">震度(03_男鹿地震)</label>
+            </div>
+            <div>
+                <input type="radio" id="sindo-04" name="layer" value="sindo">
+                <label for="sindo-04">震度(04_天長地震)</label>
+            </div>
+            <div>
+                <input type="radio" id="sindo-05" name="layer" value="sindo">
+                <label for="sindo-05">震度(05_秋田仙北地震震源北方)</label>
+            </div>
+            <div>
+                <input type="radio" id="sindo-06" name="layer" value="sindo">
+                <label for="sindo-06">震度(06_北由利断層)</label>
+            </div>
+            <div>
+                <input type="radio" id="sindo-07" name="layer" value="sindo">
+                <label for="sindo-07">震度(07_秋田仙北地震)</label>
+            </div>
+            <div>
+                <input type="radio" id="sindo-08" name="layer" value="sindo">
+                <label for="sindo-08">震度(08_横手盆地東縁断層帯北部)</label>
+            </div>
+        </div>
+        <div class="column">
+            <div>
+                <input type="radio" id="ekijoka-01" name="layer" value="ekijoka">
+                <label for="ekijoka-01">液状化(01_能代断層帯)</label>
+            </div>
+            <div>
+                <input type="radio" id="ekijoka-02" name="layer" value="ekijoka">
+                <label for="ekijoka-02">液状化(02_花輪東断層帯)</label>
+            </div>
+            <div>
+                <input type="radio" id="ekijoka-03" name="layer" value="ekijoka">
+                <label for="ekijoka-03">液状化(03_男鹿地震)</label>
+            </div>
+            <div>
+                <input type="radio" id="ekijoka-04" name="layer" value="ekijoka">
+                <label for="ekijoka-04">液状化(04_天長地震)</label>
+            </div>
+            <div>
+                <input type="radio" id="ekijoka-05" name="layer" value="ekijoka">
+                <label for="ekijoka-05">液状化(05_秋田仙北地震震源北方)</label>
+            </div>
+            <div>
+                <input type="radio" id="ekijoka-06" name="layer" value="ekijoka">
+                <label for="ekijoka-06">液状化(06_北由利断層)</label>
+            </div>
+            <div>
+                <input type="radio" id="ekijoka-07" name="layer" value="ekijoka">
+                <label for="ekijoka-07">液状化(07_秋田仙北地震)</label>
+            </div>
+            <div>
+                <input type="radio" id="ekijoka-08" name="layer" value="ekijoka">
+                <label for="ekijoka-08">液状化(08_横手盆地東縁断層帯北部)</label>
+            </div>
+        </div>
     </div>
     <div id='legend-sindo' style="display:block;" class='legend-sindo'>
         <h4>震度</h4>
@@ -224,7 +295,7 @@
             // 震度分布図・液状化危険度分布図ソース
             map.addSource("01", {
                 type: "vector",
-                url: "pmtiles://https://xs489works.xsrv.jp/pmtiles-data/pref-akita/akita-earthquake-data.pmtiles",
+                url: "pmtiles://https://xs489works.xsrv.jp/pmtiles-data/pref-akita/01.pmtiles",
                 attribution: '<a href="https://www.pref.akita.lg.jp/pages/archive/7470" target="_blank">秋田県 震度分布図及び液状化危険度分布図GISデータ</a>',
             });
 
@@ -236,7 +307,6 @@
                 'source-layer': "01fgb",
                 'filter': ["!=", ['to-number', ["get", "sindo"]], -9999.00000000000], // -9999.00000000000 を除外
                 'layout': {
-                    // 'visibility': 'none'
                     'visibility': 'visible'
                 },
                 'paint': {
@@ -265,7 +335,6 @@
                 'filter': ["!=", ['to-number', ["get", "ekijoka"]], -9999], // -9999 を除外
                 'layout': {
                     'visibility': 'none'
-                    // 'visibility': 'visible'
                 },
                 'paint': {
                     'fill-color': [
@@ -282,25 +351,124 @@
                 }
             });
 
-        });
+            // 新しいソースとレイヤーを追加する関数
+            function addEarthquakeLayer(pt) {
+                // 震度分布図・液状化危険度分布図ソース
+                map.addSource(pt, {
+                    type: "vector",
+                    url: "pmtiles://https://xs489works.xsrv.jp/pmtiles-data/pref-akita/" + pt + ".pmtiles",
+                    attribution: '<a href="https://www.pref.akita.lg.jp/pages/archive/7470" target="_blank">秋田県 震度分布図及び液状化危険度分布図GISデータ</a>',
+                });
 
-        // ラジオボタンでレイヤの表示・非表示を切り替え
-        document.getElementById('sindo').addEventListener('change', function () {
-            if (this.checked) {
-                map.setLayoutProperty('01-sindo-fill', 'visibility', 'visible');
-                map.setLayoutProperty('01-ekijoka-fill', 'visibility', 'none');
-                document.getElementById('legend-sindo').style.display = 'block';
-                document.getElementById('legend-ekijoka').style.display = 'none';
+                // 震度分布図レイヤ
+                map.addLayer({
+                    'id': pt + '-sindo-fill',
+                    'type': 'fill',
+                    'source': pt,
+                    'source-layer': pt + "fgb",
+                    'filter': ["!=", ['to-number', ["get", "sindo"]], -9999.00000000000], // -9999.00000000000 を除外
+                    'layout': {
+                        'visibility': 'none'
+                    },
+                    'paint': {
+                        'fill-color': [
+                            "case",
+                            s0, s_colors[0],
+                            s1, s_colors[1],
+                            s2, s_colors[2],
+                            s3, s_colors[3],
+                            s4, s_colors[4],
+                            s5, s_colors[5],
+                            s6, s_colors[6],
+                            s_colors[6]
+                        ],
+                        "fill-outline-color": "rgba(0, 0, 0, 0)",
+                        'fill-opacity': 0.6
+                    }
+                });
+
+                // 液状化危険度分布図レイヤ
+                map.addLayer({
+                    'id': pt + '-ekijoka-fill',
+                    'type': 'fill',
+                    'source': pt,
+                    'source-layer': pt + "fgb",
+                    'filter': ["!=", ['to-number', ["get", "ekijoka"]], -9999], // -9999 を除外
+                    'layout': {
+                        'visibility': 'none'
+                    },
+                    'paint': {
+                        'fill-color': [
+                            'match',
+                            ['get', 'ekijoka'],
+                            '3', '#FD0002', // 極めて高い
+                            '2', '#FEFC03', // 高い
+                            '1', '#00FE04', // 低い
+                            '0', '#AFE1FB', // 極めて低い
+                            'rgba(0, 0, 0, 0)'
+                        ],
+                        "fill-outline-color": "rgba(0, 0, 0, 0)",
+                        'fill-opacity': 0.6
+                    }
+                });
+
             }
+
+            // 新しいソースとレイヤーを追加
+            addEarthquakeLayer('02');
+            addEarthquakeLayer('03');
+            addEarthquakeLayer('04');
+            addEarthquakeLayer('05');
+            addEarthquakeLayer('06');
+            addEarthquakeLayer('07');
+            addEarthquakeLayer('08');
+
         });
 
-        // ラジオボタンでレイヤの表示・非表示を切り替え
-        document.getElementById('ekijoka').addEventListener('change', function () {
-            if (this.checked) {
-                map.setLayoutProperty('01-sindo-fill', 'visibility', 'none');
-                map.setLayoutProperty('01-ekijoka-fill', 'visibility', 'visible');
-                document.getElementById('legend-sindo').style.display = 'none';
-                document.getElementById('legend-ekijoka').style.display = 'block';
+        // ラジオボタンの状態に応じてレイヤーの表示・非表示を切り替える関数
+        function toggleLayer(layerType, layerId) {
+            // 震度と液状化のレイヤーを切り替える
+            for (let i = 1; i <= 8; i++) {
+                let sindoLayerName = `0${i}-sindo-fill`;
+                let ekijokaLayerName = `0${i}-ekijoka-fill`;
+
+                if (map.getLayer(sindoLayerName) && map.getLayer(ekijokaLayerName)) {
+                    if (layerType === 'sindo') {
+                        map.setLayoutProperty(sindoLayerName, 'visibility', (layerId === i) ? 'visible' : 'none');
+                        map.setLayoutProperty(ekijokaLayerName, 'visibility', 'none');
+                    } else if (layerType === 'ekijoka') {
+                        map.setLayoutProperty(ekijokaLayerName, 'visibility', (layerId === i) ? 'visible' : 'none');
+                        map.setLayoutProperty(sindoLayerName, 'visibility', 'none');
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // 各ラジオボタンのイベントリスナーを設定
+            for (let i = 1; i <= 8; i++) {
+                let sindoButton = document.getElementById(`sindo-${i.toString().padStart(2, '0')}`);
+                let ekijokaButton = document.getElementById(`ekijoka-${i.toString().padStart(2, '0')}`);
+
+                if (sindoButton) {
+                    sindoButton.addEventListener('change', function () {
+                        if (this.checked) {
+                            toggleLayer('sindo', i);
+                            document.getElementById('legend-sindo').style.display = 'block';
+                            document.getElementById('legend-ekijoka').style.display = 'none';
+                        }
+                    });
+                }
+
+                if (ekijokaButton) {
+                    ekijokaButton.addEventListener('change', function () {
+                        if (this.checked) {
+                            toggleLayer('ekijoka', i);
+                            document.getElementById('legend-sindo').style.display = 'none';
+                            document.getElementById('legend-ekijoka').style.display = 'block';
+                        }
+                    });
+                }
             }
         });
 
