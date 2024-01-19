@@ -29,4 +29,5 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
             -L "{ \"id\": \"07\", \"file\": \"07.fgb\" }" \
             -L "{ \"id\": \"08\", \"file\": \"08.fgb\" }"
             ```
+          - tippecanoeのバージョンはv2.23.0です。
     - ライセンス：[秋田県オープンデータ利用規約](https://www.pref.akita.lg.jp/pages/archive/36756)
