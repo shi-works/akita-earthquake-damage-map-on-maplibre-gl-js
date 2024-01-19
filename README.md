@@ -31,3 +31,5 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
             -L "{ \"id\": \"08\", \"file\": \"08.fgb\" }"
             ```
           - tippecanoeのバージョンはv2.23.0です。
+      - PMTilesは、PMTiles Viewerで閲覧することができます。
+      - https://protomaps.github.io/PMTiles/
