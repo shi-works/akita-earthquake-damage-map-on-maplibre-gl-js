@@ -10,6 +10,8 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
 ## PMTiles形式のデータ作成方法
 - 作成時に対象としたデータは下記の[27パターン](https://www.pref.akita.lg.jp/pages/archive/53937)です。
+| col1 |
+| ---- |
 01_能代断層帯
 02_花輪東断層帯
 03_男鹿地震
