@@ -5,8 +5,11 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 ![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/e2c0fbaf-9289-42c9-bea5-837779b6bd8e)
 
 ## 震度分布図及び液状化危険度分布図（PMTiles形式）
-- 例：01.pmtilesが1. 能代断層帯です。
 - 震度分布図及び液状化危険度分布図（PMTiles形式）は[CC BY 4.0](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/blob/main/LICENSE)で提供されます。
+- 1つのPMTilesは、1つの地震のパターンを示します。
+- 例：01.pmtilesが1. 能代断層帯です。
+- 1つのPMTilesには、sindo（計測震度）やekijoka（液状化危険度）等の属性が含まれます。
+- 属性の詳細については、[シェープファイル説明資料](https://www.pref.akita.lg.jp/pages/archive/53937)を参照してください。
 1. [01.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/01.pmtiles)
 2. [02.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/02.pmtiles)
 3. [03.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/03.pmtiles)
