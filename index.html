@@ -76,15 +76,26 @@
             height: 15px;
         }
 
-        .radio-button-container {
+        #info01 {
+            padding: 6px 8px;
+            font: 12px/14px Arial, Helvetica, sans-serif;
+            color: navy;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            width: fit-content;
             position: absolute;
             top: 10px;
             left: 10px;
             z-index: 1;
-            background-color: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .yubi {
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .radio-button-container {
             display: flex;
             justify-content: start;
         }
@@ -99,75 +110,84 @@
 
 <body>
     <div id="map"></div>
-    <div class="radio-button-container">
-        <div class="column">
-            <div>
-                <input type="radio" id="sindo-01" name="layer" value="sindo" checked>
-                <label for="sindo-01">震度(01_能代断層帯)</label>
-            </div>
-            <div>
-                <input type="radio" id="sindo-02" name="layer" value="sindo">
-                <label for="sindo-02">震度(02_花輪東断層帯)</label>
-            </div>
-            <div>
-                <input type="radio" id="sindo-03" name="layer" value="sindo">
-                <label for="sindo-03">震度(03_男鹿地震)</label>
-            </div>
-            <div>
-                <input type="radio" id="sindo-04" name="layer" value="sindo">
-                <label for="sindo-04">震度(04_天長地震)</label>
-            </div>
-            <div>
-                <input type="radio" id="sindo-05" name="layer" value="sindo">
-                <label for="sindo-05">震度(05_秋田仙北地震震源北方)</label>
-            </div>
-            <div>
-                <input type="radio" id="sindo-06" name="layer" value="sindo">
-                <label for="sindo-06">震度(06_北由利断層)</label>
-            </div>
-            <div>
-                <input type="radio" id="sindo-07" name="layer" value="sindo">
-                <label for="sindo-07">震度(07_秋田仙北地震)</label>
-            </div>
-            <div>
-                <input type="radio" id="sindo-08" name="layer" value="sindo">
-                <label for="sindo-08">震度(08_横手盆地東縁断層帯北部)</label>
-            </div>
-        </div>
-        <div class="column">
-            <div>
-                <input type="radio" id="ekijoka-01" name="layer" value="ekijoka">
-                <label for="ekijoka-01">液状化(01_能代断層帯)</label>
-            </div>
-            <div>
-                <input type="radio" id="ekijoka-02" name="layer" value="ekijoka">
-                <label for="ekijoka-02">液状化(02_花輪東断層帯)</label>
-            </div>
-            <div>
-                <input type="radio" id="ekijoka-03" name="layer" value="ekijoka">
-                <label for="ekijoka-03">液状化(03_男鹿地震)</label>
-            </div>
-            <div>
-                <input type="radio" id="ekijoka-04" name="layer" value="ekijoka">
-                <label for="ekijoka-04">液状化(04_天長地震)</label>
-            </div>
-            <div>
-                <input type="radio" id="ekijoka-05" name="layer" value="ekijoka">
-                <label for="ekijoka-05">液状化(05_秋田仙北地震震源北方)</label>
-            </div>
-            <div>
-                <input type="radio" id="ekijoka-06" name="layer" value="ekijoka">
-                <label for="ekijoka-06">液状化(06_北由利断層)</label>
-            </div>
-            <div>
-                <input type="radio" id="ekijoka-07" name="layer" value="ekijoka">
-                <label for="ekijoka-07">液状化(07_秋田仙北地震)</label>
-            </div>
-            <div>
-                <input type="radio" id="ekijoka-08" name="layer" value="ekijoka">
-                <label for="ekijoka-08">液状化(08_横手盆地東縁断層帯北部)</label>
-            </div>
-        </div>
+    <div id="info01">
+        <details>
+            <summary class="yubi">
+                <strong>レイヤー</strong>
+            </summary>
+            <fieldset>
+                <div class="radio-button-container">
+                    <div class="column">
+                        <div>
+                            <input type="radio" id="sindo-01" name="layer" value="sindo" checked>
+                            <label for="sindo-01">震度(01_能代断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-02" name="layer" value="sindo">
+                            <label for="sindo-02">震度(02_花輪東断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-03" name="layer" value="sindo">
+                            <label for="sindo-03">震度(03_男鹿地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-04" name="layer" value="sindo">
+                            <label for="sindo-04">震度(04_天長地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-05" name="layer" value="sindo">
+                            <label for="sindo-05">震度(05_秋田仙北地震震源北方)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-06" name="layer" value="sindo">
+                            <label for="sindo-06">震度(06_北由利断層)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-07" name="layer" value="sindo">
+                            <label for="sindo-07">震度(07_秋田仙北地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-08" name="layer" value="sindo">
+                            <label for="sindo-08">震度(08_横手盆地東縁断層帯北部)</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div>
+                            <input type="radio" id="ekijoka-01" name="layer" value="ekijoka">
+                            <label for="ekijoka-01">液状化(01_能代断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-02" name="layer" value="ekijoka">
+                            <label for="ekijoka-02">液状化(02_花輪東断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-03" name="layer" value="ekijoka">
+                            <label for="ekijoka-03">液状化(03_男鹿地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-04" name="layer" value="ekijoka">
+                            <label for="ekijoka-04">液状化(04_天長地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-05" name="layer" value="ekijoka">
+                            <label for="ekijoka-05">液状化(05_秋田仙北地震震源北方)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-06" name="layer" value="ekijoka">
+                            <label for="ekijoka-06">液状化(06_北由利断層)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-07" name="layer" value="ekijoka">
+                            <label for="ekijoka-07">液状化(07_秋田仙北地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-08" name="layer" value="ekijoka">
+                            <label for="ekijoka-08">液状化(08_横手盆地東縁断層帯北部)</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </details>
     </div>
     <div id='legend-sindo' style="display:block;" class='legend-sindo'>
         <h4>震度</h4>
