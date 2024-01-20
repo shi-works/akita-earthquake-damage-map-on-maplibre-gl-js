@@ -40,6 +40,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 25. [25.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/25.pmtiles)
 26. [26.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/26.pmtiles)
 27. [27.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/27.pmtiles)
+28. [akita-earthquake-data-8layer.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/akita-earthquake-data-8layer.pmtiles) (148MB)※パターン1～8を統合したもの
 
 - 原初データ出典：[震度分布図及び液状化危険度分布図（シェープファイル）](https://www.pref.akita.lg.jp/pages/archive/53937)
   - ライセンス：[秋田県オープンデータ利用規約（CC BYに従うことでも利用可能）](https://www.pref.akita.lg.jp/pages/archive/36756)
