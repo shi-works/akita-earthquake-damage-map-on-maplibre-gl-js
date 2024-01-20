@@ -74,7 +74,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 - tippecanoeのオプションは以下のとおりです。
 
 **-P：並列読み込み**
-- ただし、下記の記事によると、`-P`オプションが有効なのは、GeoJSONSeqのみのようです。
+- ただし、下記の記事によると、`-P`オプションが有効なのは、GeoJSONSeqのみのようです。  
 [ベクトルタイルのつくりかた（2022年版）](https://qiita.com/Kanahiro/items/ceeb20c158b4c70b62b6)
 
 **-pf：地物数制限を無視する**（1タイルあたり200,000フィーチャに制限しない）
