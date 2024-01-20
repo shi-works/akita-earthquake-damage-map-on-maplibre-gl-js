@@ -39,18 +39,19 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 27. 海域A＋B＋C
 
 - 上記の27パターンのシェープファイルをPython（[GDAL/OGR](https://live.osgeo.org/ja/overview/gdal_overview.html)）でFlatGeobuf形式のデータに変換し、リネーム後、下記の[tippecanoe](https://github.com/felt/tippecanoe)のコマンドを実行して作成。
-          - tippecanoeのコマンド
-            ```
-            tippecanoe -o akita-earthquake-data.pmtiles -Z8 -pf -pk -P \
-            -L "{ \"id\": \"01\", \"file\": \"01.fgb\" }" \
-            -L "{ \"id\": \"02\", \"file\": \"02.fgb\" }" \
-            -L "{ \"id\": \"03\", \"file\": \"03.fgb\" }" \
-            -L "{ \"id\": \"04\", \"file\": \"04.fgb\" }" \
-            -L "{ \"id\": \"05\", \"file\": \"05.fgb\" }" \
-            -L "{ \"id\": \"06\", \"file\": \"06.fgb\" }" \
-            -L "{ \"id\": \"07\", \"file\": \"07.fgb\" }" \
-            -L "{ \"id\": \"08\", \"file\": \"08.fgb\" }"
-            ```
-          - tippecanoeのバージョンはv2.23.0です。
-      - PMTilesは、PMTiles Viewerで閲覧することができます。
-      - https://protomaps.github.io/PMTiles/
+- tippecanoeのコマンド
+```sh:process_fgb_files.sh
+#!/bin/bash
+
+for input_file in *.fgb; do
+    output_file="${input_file%.fgb}.pmtiles"
+    echo "Processing ${input_file} ..."
+    tippecanoe -o "${output_file}" "${input_file}" -Z8 -pf -pk -P 
+done
+
+echo "All files processed."
+read -p "Press any key to continue . . . " -n1 -s
+```
+- tippecanoeのバージョンはv2.23.0です。
+- PMTilesは、PMTiles Viewerで閲覧することができます。
+- https://protomaps.github.io/PMTiles/
