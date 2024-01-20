@@ -39,7 +39,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 27. 海域A＋B＋C
 
 - 上記の27パターンのシェープファイルをPython（[GDAL/OGR](https://live.osgeo.org/ja/overview/gdal_overview.html)）でFlatGeobuf形式のデータに変換し、リネーム後、下記の[tippecanoe](https://github.com/felt/tippecanoe)のコマンドを実行して作成。
-- tippecanoeのコマンド
+- tippecanoeのバージョンはv2.23.0です。
 ```sh:process_fgb_files.sh
 #!/bin/bash
 
@@ -52,6 +52,6 @@ done
 echo "All files processed."
 read -p "Press any key to continue . . . " -n1 -s
 ```
-- tippecanoeのバージョンはv2.23.0です。
+
 - PMTilesは、PMTiles Viewerで閲覧することができます。
 - https://protomaps.github.io/PMTiles/
