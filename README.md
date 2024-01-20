@@ -110,7 +110,7 @@ read -p "Press any key to continue . . . " -n1 -s
 ### PMTilesの閲覧方法
 - PMTilesは、[PMTiles Viewer](https://protomaps.github.io/PMTiles/)で閲覧することができます
 - 下記はPMTiles Viewerでパターン1を表示した例です。
-- ※url=部分のURLを別のパターンのURLに書き換えると別のパターンでも表示ができます。
+- url=部分のURLを別のパターンのURLに書き換えると別のパターンでも表示ができます。
 - https://protomaps.github.io/PMTiles/?url=https://xs489works.xsrv.jp/pmtiles-data/pref-akita/01.pmtiles#map=8.09/39.765/140.561
 
 ## 背景地図及び地形データ
