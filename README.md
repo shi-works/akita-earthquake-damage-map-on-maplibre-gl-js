@@ -116,4 +116,4 @@ read -p "Press any key to continue . . . " -n1 -s
     - ライセンス：[国土地理院コンテンツ利用規約](https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html)に従い、出典明示により、転載も含め使用可
 - 産業技術総合研究所 シームレス標高タイル（統合DEM）
     - 出典：https://tiles.gsj.jp/tiles/elev/tiles.html
-    - ライセンス：「[産総研地質調査総合センターウェブサイト利用規約](https://www.gsj.jp/license/license.html)」に従い、商用を含む自由な二次利用が可能です。この規約はCC BY 4.0と互換です。
+    - ライセンス：[産総研地質調査総合センターウェブサイト利用規約](https://www.gsj.jp/license/license.html)に従い、商用を含む自由な二次利用が可能です。この規約はCC BY 4.0と互換です。
