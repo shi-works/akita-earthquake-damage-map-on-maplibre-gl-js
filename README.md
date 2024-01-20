@@ -107,7 +107,7 @@ echo "All files processed."
 read -p "Press any key to continue . . . " -n1 -s
 ```
 
-## PMTilesの閲覧方法
+### PMTilesの閲覧方法
 - PMTilesは、[PMTiles Viewer](https://protomaps.github.io/PMTiles/)で閲覧することができます
 - 下記はPMTiles Viewerでパターン1を表示した例です。
 - ※url=部分のURLを別のパターンのURLに書き換えると別のパターンでも表示ができます。
