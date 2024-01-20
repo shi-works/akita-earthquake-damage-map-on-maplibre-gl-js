@@ -3,10 +3,38 @@
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
 ## 震度分布図及び液状化危険度分布図（PMTiles形式）
-- 出典：https://xs489works.xsrv.jp/pmtiles-data/pref-akita/akita-earthquake-data.pmtiles
- - 原初データ出典：[震度分布図及び液状化危険度分布図（シェープファイル）](https://www.pref.akita.lg.jp/pages/archive/7470)
- - ライセンス：[秋田県オープンデータ利用規約](https://www.pref.akita.lg.jp/pages/archive/36756)
- - 概要：秋田県のWebサイトにて公開されている、秋田県地震被害想定調査の震度分布図及び液状化危険度分布図（シェープファイル）をPMTiles形式に変換したデータです。
+- 出典（例：01.pmtilesが1. 能代断層帯です。）
+1. [01.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/01.pmtiles)
+2. [02.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/02.pmtiles)
+3. [03.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/03.pmtiles)
+4. [04.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/04.pmtiles)
+5. [05.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/05.pmtiles)
+6. [06.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/06.pmtiles)
+7. [07.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/07.pmtiles)
+8. [08.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/08.pmtiles)
+9. [09.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/09.pmtiles)
+10. [10.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/10.pmtiles)
+11. [11.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/11.pmtiles)
+12. [12.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/12.pmtiles)
+13. [13.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/13.pmtiles)
+14. [14.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/14.pmtiles)
+15. [15.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/15.pmtiles)
+16. [16.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/16.pmtiles)
+17. [17.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/17.pmtiles)
+18. [18.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/18.pmtiles)
+19. [19.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/19.pmtiles)
+20. [20.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/20.pmtiles)
+21. [21.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/21.pmtiles)
+22. [22.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/22.pmtiles)
+23. [23.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/23.pmtiles)
+24. [24.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/24.pmtiles)
+25. [25.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/25.pmtiles)
+26. [26.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/26.pmtiles)
+27. [27.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/27.pmtiles)
+
+- 原初データ出典：[震度分布図及び液状化危険度分布図（シェープファイル）](https://www.pref.akita.lg.jp/pages/archive/7470)
+- ライセンス：[秋田県オープンデータ利用規約](https://www.pref.akita.lg.jp/pages/archive/36756)
+- 概要：秋田県のWebサイトにて公開されている、秋田県地震被害想定調査の震度分布図及び液状化危険度分布図（シェープファイル）をPMTiles形式に変換したデータです。
 
 ## PMTiles形式のデータ作成
 - 作成時に対象としたデータは下記の[27パターン](https://www.pref.akita.lg.jp/pages/archive/53937)です。
