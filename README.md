@@ -39,7 +39,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 - ライセンス：[秋田県オープンデータ利用規約（CC BYに従うことでも利用可能）](https://www.pref.akita.lg.jp/pages/archive/36756)
 - 概要：秋田県のWebサイトにて公開されている、秋田県地震被害想定調査の震度分布図及び液状化危険度分布図（シェープファイル）をPMTiles形式に変換したデータです。
 
-## PMTiles形式のデータ作成
+## PMTiles形式のデータ作成方法
 - 作成時に対象としたデータは下記の[27パターン](https://www.pref.akita.lg.jp/pages/archive/53937)です。
 1. 能代断層帯
 2. 花輪東断層帯
