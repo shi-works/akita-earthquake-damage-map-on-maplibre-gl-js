@@ -84,7 +84,7 @@ echo "All files processed."
 read -p "Press any key to continue . . . " -n1 -s
 ```
 
-- PMTilesは、PMTiles Viewerで閲覧することができます（下記はPMTiles Viewerでパターン1を表示した例です）。
+- PMTilesは、[PMTiles Viewer](https://protomaps.github.io/PMTiles/)で閲覧することができます（下記はPMTiles Viewerでパターン1を表示した例です）。
 - ※url=部分のURLを書き換えると別のパターンでも表示ができます。
 - https://protomaps.github.io/PMTiles/?url=https://xs489works.xsrv.jp/pmtiles-data/pref-akita/01.pmtiles#map=8.09/39.765/140.561
 
