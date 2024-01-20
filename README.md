@@ -2,22 +2,23 @@
 ## デモサイト
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
-- 震度分布図及び液状化危険度分布図（PMTiles形式）
-    - 出典：https://xs489works.xsrv.jp/pmtiles-data/pref-akita/akita-earthquake-data.pmtiles
-        - 原初データ出典：[震度分布図及び液状化危険度分布図（シェープファイル）](https://www.pref.akita.lg.jp/pages/archive/7470)
-        - ライセンス：[秋田県オープンデータ利用規約](https://www.pref.akita.lg.jp/pages/archive/36756)
-    - 概要：秋田県のWebサイトにて公開されている、秋田県地震被害想定調査の震度分布図及び液状化危険度分布図（シェープファイル）をPMTiles形式に変換したデータです。
-    - PMTiles形式のデータ作成方法
-      - 作成時に対象としたデータは下記の8パターンです。
-        - 01_能代断層帯
-        - 02_花輪東断層帯
-        - 03_男鹿地震
-        - 04_天長地震
-        - 05_秋田仙北地震震源北方
-        - 06_北由利断層
-        - 07_秋田仙北地震
-        - 08_横手盆地東縁断層帯北部
-      - 上記の8パターンのシェープファイルをPython（[GDAL/OGR](https://live.osgeo.org/ja/overview/gdal_overview.html)）でFlatGeobuf形式のデータに変換し、リネーム後、下記の[tippecanoe](https://github.com/felt/tippecanoe)のコマンドを実行して作成。
+## 震度分布図及び液状化危険度分布図（PMTiles形式）
+- 出典：https://xs489works.xsrv.jp/pmtiles-data/pref-akita/akita-earthquake-data.pmtiles
+ - 原初データ出典：[震度分布図及び液状化危険度分布図（シェープファイル）](https://www.pref.akita.lg.jp/pages/archive/7470)
+ - ライセンス：[秋田県オープンデータ利用規約](https://www.pref.akita.lg.jp/pages/archive/36756)
+ - 概要：秋田県のWebサイトにて公開されている、秋田県地震被害想定調査の震度分布図及び液状化危険度分布図（シェープファイル）をPMTiles形式に変換したデータです。
+
+## PMTiles形式のデータ作成方法
+- 作成時に対象としたデータは下記の27パターンです。
+ - 01_能代断層帯
+ - 02_花輪東断層帯
+ - 03_男鹿地震
+ - 04_天長地震
+ - 05_秋田仙北地震震源北方
+ - 06_北由利断層
+ - 07_秋田仙北地震
+ - 08_横手盆地東縁断層帯北部
+- 上記の27パターンのシェープファイルをPython（[GDAL/OGR](https://live.osgeo.org/ja/overview/gdal_overview.html)）でFlatGeobuf形式のデータに変換し、リネーム後、下記の[tippecanoe](https://github.com/felt/tippecanoe)のコマンドを実行して作成。
           - tippecanoeのコマンド
             ```
             tippecanoe -o akita-earthquake-data.pmtiles -Z8 -pf -pk -P \
