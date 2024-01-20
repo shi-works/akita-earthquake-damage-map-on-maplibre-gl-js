@@ -2,6 +2,8 @@
 ## デモサイト（下記の1～8のパターンを表示）
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
+![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/e2c0fbaf-9289-42c9-bea5-837779b6bd8e)
+
 ## 震度分布図及び液状化危険度分布図（PMTiles形式）
 - 出典（例：01.pmtilesが1. 能代断層帯です。）
 1. [01.pmtiles](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/01.pmtiles)
