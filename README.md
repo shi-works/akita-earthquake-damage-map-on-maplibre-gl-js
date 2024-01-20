@@ -86,3 +86,14 @@ read -p "Press any key to continue . . . " -n1 -s
 - PMTilesは、PMTiles Viewerで閲覧することができます（下記はPMTiles Viewerでパターン1を表示した例です）。
 - ※url=部分のURLを書き換えると別のパターンでも表示ができます。
 - https://protomaps.github.io/PMTiles/?url=https://xs489works.xsrv.jp/pmtiles-data/pref-akita/01.pmtiles#map=8.09/39.765/140.561
+
+## 背景地図及び地形データ
+- 国土地理院 最適化ベクトルタイル（PMTiles形式）
+    - 出典：https://github.com/gsi-cyberjapan/optimal_bvmap
+    - ライセンス：[国土地理院コンテンツ利用規約](https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html)に従い、出典明示により、転載も含め使用可
+- 国土地理院 地理院タイル（陰影起伏図）
+    - 出典：https://maps.gsi.go.jp/development/ichiran.html#hillshademap
+    - ライセンス：[国土地理院コンテンツ利用規約](https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html)に従い、出典明示により、転載も含め使用可
+- 産業技術総合研究所 シームレス標高タイル（統合DEM）
+    - 出典：https://tiles.gsj.jp/tiles/elev/tiles.html
+    - ライセンス：「[産総研地質調査総合センターウェブサイト利用規約](https://www.gsj.jp/license/license.html)」に従い、商用を含む自由な二次利用が可能です。この規約はCC BY 4.0と互換です。
