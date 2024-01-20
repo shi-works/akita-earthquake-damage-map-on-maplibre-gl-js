@@ -100,7 +100,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 for input_file in *.fgb; do
     output_file="${input_file%.fgb}.pmtiles"
     echo "Processing ${input_file} ..."
-    tippecanoe -o "${output_file}" "${input_file}" -Z8 -pf -pk -P 
+    tippecanoe -o "${output_file}" "${input_file}" -Z8 -z10 -pf -pk -P 
 done
 
 echo "All files processed."
