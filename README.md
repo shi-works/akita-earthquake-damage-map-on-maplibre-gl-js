@@ -1,6 +1,7 @@
 # MapLibre GL JSで秋田県地震被害想定マップ（震度分布図及び液状化危険度分布図）を表示するデモサイト
 ## デモサイト（下記の1～8の地震のパターンを表示）
 > **重要:** 震度の区分は、sindo（計測震度）と[気象庁の震度階級表](https://www.data.jma.go.jp/eqev/data/kyoshin/kaisetsu/calc_sindo.html)をもとに表示しています。
+
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
 ![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/30fab43b-b5b5-4362-be28-575c537b838f)
