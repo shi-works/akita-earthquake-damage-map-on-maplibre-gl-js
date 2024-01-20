@@ -72,18 +72,20 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 - 上記の27パターンのシェープファイルをPython（[GDAL/OGR](https://live.osgeo.org/ja/overview/gdal_overview.html)）でFlatGeobuf形式のデータに変換し、リネーム後、下記の[tippecanoe](https://github.com/felt/tippecanoe)のコマンドを実行して作成。
 - tippecanoeのバージョンはv2.23.0です。
 - tippecanoeのオプションは以下のとおりです。
-```
--P：並列読み込み
-ただし、下記の記事によると、-Pオプションが有効なのは、GeoJSONSeqのみのようです。
-https://qiita.com/Kanahiro/items/ceeb20c158b4c70b62b6
--pf：地物数制限を無視する（1タイルあたり200,000フィーチャに制限しない）
--pk：ファイルサイズ制限を無視する（1タイルあたり500Kバイトに制限しない）
--z, -Z：ズームレベル指定
+**-P：並列読み込み**
+ただし、下記の記事によると、`-P`オプションが有効なのは、GeoJSONSeqのみのようです。
+[ベクトルタイルのつくりかた（2022年版）](https://qiita.com/Kanahiro/items/ceeb20c158b4c70b62b6)
+
+**-pf：地物数制限を無視する**（1タイルあたり200,000フィーチャに制限しない）
+
+**-pk：ファイルサイズ制限を無視する**（1タイルあたり500Kバイトに制限しない）
+
+**-z, -Z：ズームレベル指定**
 - ズームレベルを指定する場合は下記のとおりになります。
-- -Z10 -z18とすると、ズームレベル10-18の範囲でタイルを生成します。
+  - **-Z10 -z18**とすると、ズームレベル10-18の範囲でタイルを生成します。
 - 指定しない場合は自動的に設定されます（ズームレベル0～14）。
-- 大文字のZが最小ズームレベル、小文字のzが最大ズームレベルを示すことに注意が必要です。
-```
+- 大文字の**Z**が最小ズームレベル、小文字の**z**が最大ズームレベルを示すことに注意が必要です。
+
 ```sh:process_fgb_files.sh
 #!/bin/bash
 
