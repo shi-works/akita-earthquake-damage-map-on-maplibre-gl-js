@@ -1,5 +1,5 @@
 # MapLibre GL JSで秋田県地震被害想定マップ（震度分布図及び液状化危険度分布図）を表示するデモサイト
-## デモサイト
+## デモサイト（下記の1～8のパターンを表示）
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
 ## 震度分布図及び液状化危険度分布図（PMTiles形式）
