@@ -116,6 +116,7 @@
                 <strong>レイヤー</strong>
             </summary>
             <fieldset>
+                <!--パターン1～8
                 <div class="radio-button-container">
                     <div class="column">
                         <div>
@@ -183,6 +184,78 @@
                         <div>
                             <input type="radio" id="ekijoka-08" name="layer" value="ekijoka">
                             <label for="ekijoka-08">液状化(08_横手盆地東縁断層帯北部)</label>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <!--代表8パターン-->
+                <div class="radio-button-container">
+                    <div class="column">
+                        <div>
+                            <input type="radio" id="sindo-01" name="layer" value="sindo" checked>
+                            <label for="sindo-01">震度(01_能代断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-02" name="layer" value="sindo">
+                            <label for="sindo-02">震度(02_花輪東断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-04" name="layer" value="sindo">
+                            <label for="sindo-04">震度(04_天長地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-06" name="layer" value="sindo">
+                            <label for="sindo-06">震度(06_北由利断層)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-07" name="layer" value="sindo">
+                            <label for="sindo-07">震度(07_秋田仙北地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-13" name="layer" value="sindo">
+                            <label for="sindo-13">震度(13_横手盆地 真昼山地連動)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-22" name="layer" value="sindo">
+                            <label for="sindo-22">震度(22_海域Ａ)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sindo-27" name="layer" value="sindo">
+                            <label for="sindo-27">震度(27_海域Ａ＋Ｂ＋Ｃ)</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div>
+                            <input type="radio" id="ekijoka-01" name="layer" value="ekijoka">
+                            <label for="ekijoka-01">液状化(01_能代断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-02" name="layer" value="ekijoka">
+                            <label for="ekijoka-02">液状化(02_花輪東断層帯)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-04" name="layer" value="ekijoka">
+                            <label for="ekijoka-04">液状化(04_天長地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-06" name="layer" value="ekijoka">
+                            <label for="ekijoka-06">液状化(06_北由利断層)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-07" name="layer" value="ekijoka">
+                            <label for="ekijoka-07">液状化(07_秋田仙北地震)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-13" name="layer" value="ekijoka">
+                            <label for="ekijoka-13">震度(13_横手盆地 真昼山地連動)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-22" name="layer" value="ekijoka">
+                            <label for="ekijoka-22">震度(22_海域Ａ)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="ekijoka-27" name="layer" value="ekijoka">
+                            <label for="ekijoka-27">震度(27_海域Ａ＋Ｂ＋Ｃ)</label>
                         </div>
                     </div>
                 </div>
@@ -436,21 +509,24 @@
 
             // 新しいソースとレイヤーを追加
             addEarthquakeLayer('02');
-            addEarthquakeLayer('03');
+            // addEarthquakeLayer('03');
             addEarthquakeLayer('04');
-            addEarthquakeLayer('05');
+            // addEarthquakeLayer('05');
             addEarthquakeLayer('06');
             addEarthquakeLayer('07');
-            addEarthquakeLayer('08');
-
+            // addEarthquakeLayer('08');
+            addEarthquakeLayer('13');
+            addEarthquakeLayer('22');
+            addEarthquakeLayer('27');
         });
 
         // ラジオボタンの状態に応じてレイヤーの表示・非表示を切り替える関数
         function toggleLayer(layerType, layerId) {
             // 震度と液状化のレイヤーを切り替える
-            for (let i = 1; i <= 8; i++) {
-                let sindoLayerName = `0${i}-sindo-fill`;
-                let ekijokaLayerName = `0${i}-ekijoka-fill`;
+            for (let i = 1; i <= 27; i++) {
+                let layerIndex = i < 10 ? `0${i}` : `${i}`;
+                let sindoLayerName = `${layerIndex}-sindo-fill`;
+                let ekijokaLayerName = `${layerIndex}-ekijoka-fill`;
 
                 if (map.getLayer(sindoLayerName) && map.getLayer(ekijokaLayerName)) {
                     if (layerType === 'sindo') {
@@ -464,9 +540,10 @@
             }
         }
 
+        // ラジオボタンの状態に応じて凡例の表示・非表示を切り替える関数
         document.addEventListener('DOMContentLoaded', (event) => {
             // 各ラジオボタンのイベントリスナーを設定
-            for (let i = 1; i <= 8; i++) {
+            for (let i = 1; i <= 27; i++) {
                 let sindoButton = document.getElementById(`sindo-${i.toString().padStart(2, '0')}`);
                 let ekijokaButton = document.getElementById(`ekijoka-${i.toString().padStart(2, '0')}`);
 
