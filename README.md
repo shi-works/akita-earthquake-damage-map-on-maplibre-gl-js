@@ -11,7 +11,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 ## 震度分布図及び液状化危険度分布図（PMTiles形式）
 - 概要：秋田県のWebサイトにてオープンデータとして公開されている、[秋田県地震被害想定調査](https://www.pref.akita.lg.jp/pages/archive/7470)の[震度分布図及び液状化危険度分布図（シェープファイル）](https://www.pref.akita.lg.jp/pages/archive/53937)を[PMTiles](https://github.com/protomaps/PMTiles)形式に変換したデータです。
 - 震度分布図及び液状化危険度分布図（PMTiles形式）は[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ja)で公開しています。
-- 1つのPMTilesには、1つの地震のパターンのデータが含まれます。
+- 1つのPMTilesには、1つの地震パターンのデータが含まれます。
 - 例：01.pmtilesが1. 能代断層帯です。
 - 1つのPMTilesには、sindo（計測震度）やekijoka（液状化危険度）等の属性が含まれます。
 - 属性の詳細については、[シェープファイル説明資料](https://www.pref.akita.lg.jp/pages/archive/53937)を参照してください。
@@ -97,7 +97,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 - 大文字の**Z**が最小ズームレベル、小文字の**z**が最大ズームレベルを示すことに注意が必要です。
 - 指定しない場合は自動的に設定されます。
 - [こちら](https://github.com/felt/tippecanoe#zoom-levels)でズームレベルごとの地理分解能の概数がわかります。
-- ズームレベル14で0.5m相当となり、これは一般的なWeb地図では十分な分解能と言えます。
+- 例えば、ズームレベル14で0.5m相当となり、これは一般的なWeb地図では十分な分解能と言えます。
 
 ```sh:process_fgb_files.sh
 #!/bin/bash
