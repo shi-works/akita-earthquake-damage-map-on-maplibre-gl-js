@@ -314,11 +314,22 @@
             attributionControl: false
         });
 
-        // ズーム・回転
-        map.addControl(new maplibregl.NavigationControl(), 'top-right');
+        // スケール表示
+        map.addControl(new maplibregl.ScaleControl({
+            maxWidth: 200,
+            unit: 'metric'
+        }));
+
+        // 3D地形コントロール
+        map.addControl(
+            new maplibregl.TerrainControl({
+                source: 'aist-dem',
+                exaggeration: 1 // 標高を強調する倍率
+            }), 'bottom-left'
+        );
 
         // フルスクリーンモードのオンオフ
-        map.addControl(new maplibregl.FullscreenControl(), 'top-right');
+        map.addControl(new maplibregl.FullscreenControl(), 'bottom-left');
 
         // 現在位置表示
         map.addControl(new maplibregl.GeolocateControl({
@@ -328,27 +339,16 @@
             fitBoundsOptions: { maxZoom: 18 },
             trackUserLocation: true,
             showUserLocation: true
-        }), 'top-right');
+        }), 'bottom-left');
 
-        // スケール表示
-        map.addControl(new maplibregl.ScaleControl({
-            maxWidth: 200,
-            unit: 'metric'
-        }));
+        // ズーム・回転
+        map.addControl(new maplibregl.NavigationControl(), 'bottom-left');
 
         // Attributionを折りたたみ表示
         map.addControl(new maplibregl.AttributionControl({
             compact: true,
             customAttribution: '（<a href="https://twitter.com/shi__works" target="_blank">Twitter</a> | <a href="https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js" target="_blank">Github</a>）'
         }));
-
-        // 3D地形コントロール
-        map.addControl(
-            new maplibregl.TerrainControl({
-                source: 'aist-dem',
-                exaggeration: 1 // 標高を強調する倍率
-            }), 'top-right'
-        );
 
         // 計測震度色分け用のフィルタ準備
         //【参考】https://www.data.jma.go.jp/eqev/data/kyoshin/kaisetsu/calc_sindo.html
