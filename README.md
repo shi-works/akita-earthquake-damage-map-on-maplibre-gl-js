@@ -77,6 +77,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 27. 海域A＋B＋C
 
 - 上記の27パターンのシェープファイルをPython（[GDAL/OGR](https://live.osgeo.org/ja/overview/gdal_overview.html)）でFlatGeobuf形式のデータに変換し、リネーム後、下記の[tippecanoe](https://github.com/felt/tippecanoe)のコマンドを実行して作成。
+- 27パターンのFlatGeobuf形式のデータ（リネーム前）は[こちらからダウンロード（7zip形式）](https://xs489works.xsrv.jp/pmtiles-data/pref-akita/fgb.7z)できます。
 - tippecanoeのバージョンはv2.23.0です。
 - tippecanoeのオプションは以下のとおりです。
 
