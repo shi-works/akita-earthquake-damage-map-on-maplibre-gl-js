@@ -2,7 +2,7 @@
 ## デモサイト
 > **重要:**
 > [秋田県地震被害想定調査報告書 概要版](https://www.pref.akita.lg.jp/uploads/public/archive_0000053945_00/%E6%A6%82%E8%A6%81%E7%89%88[%E5%8D%B0%E5%88%B7%E7%94%A8].pdf)の代表8パターン（パターン1、2、4、6、7、13、22、27）の地震による被害想定を表示しています。
-> 震度は、sindo（計測震度）と[気象庁の震度階級表](https://www.data.jma.go.jp/eqev/data/kyoshin/kaisetsu/calc_sindo.html)をもとに表示しています。
+> 震度は、計測震度と[気象庁の震度階級表](https://www.data.jma.go.jp/eqev/data/kyoshin/kaisetsu/calc_sindo.html)をもとに表示しています。
 
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
