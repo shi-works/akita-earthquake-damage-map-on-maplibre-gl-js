@@ -4,7 +4,7 @@
 
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/
 
-![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/30fab43b-b5b5-4362-be28-575c537b838f)
+![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/65c2f81c-7e4c-4805-affb-d58c97b40562)
 
 ## 震度分布図及び液状化危険度分布図（PMTiles形式）
 - 概要：秋田県のWebサイトにてオープンデータとして公開されている、[秋田県地震被害想定調査](https://www.pref.akita.lg.jp/pages/archive/7470)の[震度分布図及び液状化危険度分布図（シェープファイル）](https://www.pref.akita.lg.jp/pages/archive/53937)を[PMTiles](https://github.com/protomaps/PMTiles)形式に変換したデータです。
