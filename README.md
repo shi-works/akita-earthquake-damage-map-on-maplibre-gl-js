@@ -5,12 +5,13 @@
 > 震度は、計測震度と[気象庁の震度階級表](https://www.data.jma.go.jp/eqev/data/kyoshin/kaisetsu/calc_sindo.html)をもとに表示しています。
 
 ### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図の通常の重ね合わせ
-> **震度分布図・液状化危険度分布図の不透明度が60%**  
+> **震度分布図・液状化危険度分布図の不透明度：60%**  
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index.html
 
 ![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/07cd869a-5df5-407c-a358-c03eac6a4bc8)
 
 ### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図を合成して重ね合わせ
+> **震度分布図・液状化危険度分布図の不透明度：100%**  
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index2.html
 
 ![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/57d0ec7c-05f1-4da5-b62a-c6b2d18bb750)
