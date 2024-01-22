@@ -8,7 +8,7 @@
 > **震度分布図・液状化危険度分布図の不透明度：60%**  
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index.html
 
-![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/07cd869a-5df5-407c-a358-c03eac6a4bc8)
+![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/6fe2b5f4-b823-4059-bf45-4f4f66a318b0)
 
 ### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図を合成して重ね合わせ
 > **震度分布図・液状化危険度分布図の不透明度：100%**  
