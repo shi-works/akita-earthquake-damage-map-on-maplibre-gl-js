@@ -302,7 +302,7 @@
         // マップの初期化
         const map = new maplibregl.Map({
             container: 'map',
-            style: 'std.json',
+            style: 'std_2.json',
             center: [140.528, 39.7],
             zoom: 8.34,
             minZoom: 1,
@@ -350,6 +350,7 @@
             customAttribution: '（<a href="https://twitter.com/shi__works" target="_blank">Twitter</a> | <a href="https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js" target="_blank">Github</a>）'
         }));
 
+        /*
         // 計測震度色分け用のフィルタ準備
         //【参考】https://www.data.jma.go.jp/eqev/data/kyoshin/kaisetsu/calc_sindo.html
         let s0 = ["all", ["<", ['to-number', ["get", "sindo"]], 3.5]]; // 震度3以下：3.5未満
@@ -368,9 +369,9 @@
             '#FEFE00',
             '#FEBA00',
             '#FE0000',
-            '#870054',
-            '#000000'
+            '#870054'
         ]
+        */
 
         map.on('load', function () {
             // 産総研 シームレス標高タイルソース
@@ -386,6 +387,7 @@
             // 産総研 シームレス標高タイルセット
             // map.setTerrain({ 'source': 'aist-dem', 'exaggeration': 1 });
 
+            /*
             // 震度分布図・液状化危険度分布図ソース
             map.addSource("01", {
                 type: "vector",
@@ -395,55 +397,57 @@
 
             // 震度分布図レイヤ
             map.addLayer({
-                'id': '01-sindo-fill',
-                'type': 'fill',
-                'source': '01',
-                'source-layer': "01fgb",
-                'filter': ["!=", ['to-number', ["get", "sindo"]], -9999.00000000000], // -9999.00000000000 を除外
-                'layout': {
-                    'visibility': 'visible'
+                "id": "01-sindo-fill",
+                "type": "fill",
+                "source": "01",
+                "source-layer": "01fgb",
+                "filter": ["!=", ["to-number", ["get", "sindo"]], -9999.00000000000], // -9999.00000000000 を除外
+                "layout": {
+                    "visibility": "visible"
                 },
-                'paint': {
-                    'fill-color': [
+                "paint": {
+                    "fill-color": [
                         "case",
-                        s0, s_colors[0],
-                        s1, s_colors[1],
-                        s2, s_colors[2],
-                        s3, s_colors[3],
-                        s4, s_colors[4],
-                        s5, s_colors[5],
-                        s6, s_colors[6],
-                        s_colors[7]
+                        ["all", ["<", ["to-number", ["get", "sindo"]], 3.5]], "#10CBDC",
+                        ["all", [">=", ["to-number", ["get", "sindo"]], 3.5], ["<", ["to-number", ["get", "sindo"]], 4.5]], "#00AA10",
+                        ["all", [">=", ["to-number", ["get", "sindo"]], 4.5], ["<", ["to-number", ["get", "sindo"]], 5.0]], "#76DC76",
+                        ["all", [">=", ["to-number", ["get", "sindo"]], 5.0], ["<", ["to-number", ["get", "sindo"]], 5.5]], "#FEFE00",
+                        ["all", [">=", ["to-number", ["get", "sindo"]], 5.5], ["<", ["to-number", ["get", "sindo"]], 6.0]], "#FEBA00",
+                        ["all", [">=", ["to-number", ["get", "sindo"]], 6.0], ["<", ["to-number", ["get", "sindo"]], 6.5]], "#FE0000",
+                        ["all", [">=", ["to-number", ["get", "sindo"]], 6.5]], "#870054",
+                        "#000000"
                     ],
                     "fill-outline-color": "rgba(0, 0, 0, 0)",
-                    'fill-opacity': 0.6
+                    "fill-opacity": 0.6
                 }
             });
 
+
             // 液状化危険度分布図レイヤ
             map.addLayer({
-                'id': '01-ekijoka-fill',
-                'type': 'fill',
-                'source': '01',
-                'source-layer': "01fgb",
-                'filter': ["!=", ['to-number', ["get", "ekijoka"]], -9999], // -9999 を除外
-                'layout': {
-                    'visibility': 'none'
+                "id": "01-ekijoka-fill",
+                "type": "fill",
+                "source": "01",
+                "source-layer": "01fgb",
+                "filter": ["!=", ["to-number", ["get", "ekijoka"]], -9999], // -9999 を除外
+                "layout": {
+                    "visibility": "none"
                 },
-                'paint': {
-                    'fill-color': [
-                        'match',
-                        ['get', 'ekijoka'],
-                        '3', '#FD0002', // 極めて高い
-                        '2', '#FEFC03', // 高い
-                        '1', '#00FE04', // 低い
-                        '0', '#AFE1FB', // 極めて低い
-                        'rgba(0, 0, 0, 0)'
+                "paint": {
+                    "fill-color": [
+                        "match",
+                        ["get", "ekijoka"],
+                        "3", "#FD0002", // 極めて高い
+                        "2", "#FEFC03", // 高い
+                        "1", "#00FE04", // 低い
+                        "0", "#AFE1FB", // 極めて低い
+                        "rgba(0, 0, 0, 0)"
                     ],
                     "fill-outline-color": "rgba(0, 0, 0, 0)",
-                    'fill-opacity': 0.6
+                    "fill-opacity": 0.6
                 }
             });
+            */
 
             // 新しいソースとレイヤーを追加する関数
             function addEarthquakeLayer(pt) {
