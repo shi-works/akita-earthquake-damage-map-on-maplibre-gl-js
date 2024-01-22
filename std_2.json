@@ -373,7 +373,7 @@
 				-9999.00000000000
 			],
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -601,7 +601,7 @@
 				-9999.00000000000
 			],
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -829,7 +829,7 @@
 				-9999.00000000000
 			],
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -1057,7 +1057,7 @@
 				-9999.00000000000
 			],
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -1285,7 +1285,7 @@
 				-9999.00000000000
 			],
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -1513,7 +1513,7 @@
 				-9999.00000000000
 			],
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -1741,7 +1741,7 @@
 				-9999.00000000000
 			],
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
