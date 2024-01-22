@@ -519,6 +519,26 @@
             addEarthquakeLayer('13');
             addEarthquakeLayer('22');
             addEarthquakeLayer('27');
+
+            // 陰影起伏図ソース
+            map.addSource("hillshade", {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png"
+                ],
+                "attribution": "<a href='https://maps.gsi.go.jp/development/ichiran.html#hillshademap' target='_blank'>地理院タイル(陰影起伏図)</a>"
+            });
+
+            // 陰影起伏図レイヤ
+            map.addLayer({
+                "id": "hillshade",
+                "type": "raster",
+                "source": "hillshade",
+                "paint": {
+                    "raster-opacity": 0.3
+                }
+            });
+
         });
 
         // ラジオボタンの状態に応じてレイヤーの表示・非表示を切り替える関数
