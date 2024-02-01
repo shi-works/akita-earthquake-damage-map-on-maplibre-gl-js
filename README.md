@@ -19,8 +19,10 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index2
 
 ## 配色：気象庁配色に準拠
 ### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図の通常の重ね合わせ
-> **震度分布図・液状化危険度分布図の不透明度：60%**  
+> **震度分布図・液状化危険度分布図の不透明度：80%**  
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index3.html
+
+![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/c2bfdb44-ac37-46fe-8ee9-06bdde3f50ba)
 
 ### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図を合成して重ね合わせ
 > **震度分布図・液状化危険度分布図の不透明度：100%**  
