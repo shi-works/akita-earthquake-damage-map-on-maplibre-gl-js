@@ -4,9 +4,10 @@
 > デモサイトでは、[秋田県地震被害想定調査報告書 概要版](https://www.pref.akita.lg.jp/uploads/public/archive_0000053945_00/%E6%A6%82%E8%A6%81%E7%89%88[%E5%8D%B0%E5%88%B7%E7%94%A8].pdf)の代表8パターン（パターン1、2、4、6、7、13、22、27）の地震による被害想定を表示しています。
 > 震度は、計測震度と[気象庁の震度階級表](https://www.data.jma.go.jp/eqev/data/kyoshin/kaisetsu/calc_sindo.html)をもとに表示しています。
 
+## 配色：秋田県報告書に準拠
 ### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図の通常の重ね合わせ
 > **震度分布図・液状化危険度分布図の不透明度：60%**  
-https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index.html
+https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index1.html
 
 ![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/6fe2b5f4-b823-4059-bf45-4f4f66a318b0)
 
@@ -15,6 +16,15 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index.
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index2.html
 
 ![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/78b06512-fc02-4661-987d-8b6ab23df562)
+
+## 配色：気象庁配色に準拠
+### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図の通常の重ね合わせ
+> **震度分布図・液状化危険度分布図の不透明度：60%**  
+https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index3.html
+
+### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図を合成して重ね合わせ
+> **震度分布図・液状化危険度分布図の不透明度：100%**  
+https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index4.html
 
 > **[秋田県津波浸水想定マップはこちら（PMTilesの最適化は未実施）](https://github.com/shi-works/akita-earthquake-tsunami-damage-map-on-maplibre-gl-js)**
 
