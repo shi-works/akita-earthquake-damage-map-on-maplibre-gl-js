@@ -121,14 +121,6 @@
 			}
 		},
 		{
-			"id": "hillshade",
-			"type": "raster",
-			"source": "h",
-			"paint": {
-				"raster-opacity": 0.3
-			}
-		},
-		{
 			"id": "01-sindo-fill",
 			"type": "fill",
 			"source": "01",
@@ -1950,6 +1942,14 @@
 				],
 				"fill-outline-color": "rgba(0, 0, 0, 0)",
 				"fill-opacity": 1
+			}
+		},
+		{
+			"id": "hillshade",
+			"type": "raster",
+			"source": "h",
+			"paint": {
+				"raster-opacity": 0.3
 			}
 		},
 		{
