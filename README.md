@@ -17,7 +17,7 @@ https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index2
 
 ![image](https://github.com/shi-works/akita-earthquake-damage-map-on-maplibre-gl-js/assets/71203808/78b06512-fc02-4661-987d-8b6ab23df562)
 
-## 配色：気象庁配色に準拠
+## 配色：[気象庁ホームページにおける気象情報の配色に関する設定指針](https://www.jma.go.jp/jma/kishou/info/colorguide/HPColorGuide_202007.pdf)に準拠
 ### 国土地理院 最適化ベクトルタイルと震度分布図・液状化危険度分布図の通常の重ね合わせ
 > **震度分布図・液状化危険度分布図の不透明度：80%**  
 https://shi-works.github.io/akita-earthquake-damage-map-on-maplibre-gl-js/index3.html
